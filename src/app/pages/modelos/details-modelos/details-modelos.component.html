@@ -1,0 +1,206 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Detalles</h4>
+      </div>
+      <div class="card-body">
+        
+          <div class="row">
+            <div class="col">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.name"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+            </div>
+            <div class="col">
+              <label for="name">Apellidos</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.lastName"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="name">Alcaldia</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.townHall"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+              
+            </div>
+
+            <div class="col">
+              <label for="name">Modelo</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.isModel"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+              
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label for="name">Nacionalidad</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.nationality"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+              
+            </div>
+            <div class="col">
+              <label for="name">Talla</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.size"
+                class="form-control"
+                placeholder="Ingrese su nombre"
+              />
+              
+            </div>
+            <div class="col-4">
+              <label for="name">Estatura</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.height"
+                class="form-control"
+                placeholder="Ingrese su Estatura"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="name">Fecha de nacimiento</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.dateOfBirth"
+                class="form-control"
+                placeholder="Ingrese su Fecha de nacimiento"
+              />
+            </div>
+            <div class="col-4">
+              <label for="name">Genero</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.gender"
+                class="form-control"
+                placeholder="Ingrese su Genero"
+              />
+            </div>
+            <div class="col-4">
+              <label for="name">Seguro social</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.socialSecurity"
+                class="form-control"
+                placeholder="Ingrese su social"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-4">
+              <label for="name">Color de ojos</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.eyesColor"
+                class="form-control"
+                placeholder="Ingrese su Color de ojos"
+              />
+            </div>
+            <div class="col-4">
+              <label for="name">Color de piel</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.skinColor"
+                class="form-control"
+                placeholder="Ingrese su Color de piel"
+              />
+            </div>
+            <div class="col-4">
+              <label for="name">Color de cabello</label>
+              <input
+                type="text"
+                [(ngModel)]="modelo.hairColor"
+                class="form-control"
+                placeholder="Ingrese su Color de cabello"
+              />
+            </div>
+          </div>
+          <br>
+          <div class="text-center">
+            <h6>Fotos de Portafolio</h6>
+          </div>
+          
+          <div class="row col d-flex justify-content-around">
+            
+              <div class="mb-3">
+                
+                <img src="{{modelo.photoOne}}" height="120" alt="">
+              </div>
+            
+            
+              <div class="mb-3">
+                
+                <img src="{{modelo.photoTwo}}" height="120" alt="">
+              </div>
+              <div class="mb-3">
+                
+                <img src="{{modelo.photoThree}}" height="120" alt="">
+              </div>
+           
+              <div class="mb-3">
+                
+                <img src="{{modelo.photoFour}}" height="120" alt="">
+              </div>
+          </div>
+          
+          <div class="row col d-flex justify-content-around">
+            
+          <div class="mb-3">
+            <h6>Añadir INE</h6>
+            <img src="{{modelo.ine}}" height="120" alt="">
+          </div>
+          
+          <div class="mb-3">
+            <h6>Añadir comprobante de domicilio</h6>
+            <img src="{{modelo.voucherOfHome}}" height="120" alt="">
+          </div>
+          </div>
+          
+          <div class="row col d-flex justify-content-around">
+            
+          <div class="mb-3">
+            <h6>Añadir estado de cuenta</h6>
+            <img src="{{modelo.stateOfAccount}}" height="120" alt="">
+          </div>
+         
+          <div class="mb-3">
+            <h6>Añadir RFC</h6>
+            <img src="{{modelo.rfc}}" height="120" alt="">
+          </div>
+         
+          <div class="mb-3">
+            <h6>Añadir TU FM2</h6>
+            <img src="{{modelo.fm2}}" height="120" alt="">
+          </div>
+          </div>
+       
+      </div>
+      
+    </div>
+  </div>
+</div>

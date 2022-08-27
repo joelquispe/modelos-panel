@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "modeloapp-f2f80": {
+      "hosting": {
+        "pd-free-angularcli": [
+          "modeloapp-f2f80"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "modeloapp-f2f80"
+  }
+}

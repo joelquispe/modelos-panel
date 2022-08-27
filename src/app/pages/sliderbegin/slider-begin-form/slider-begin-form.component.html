@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">{{ titulo }}</h4>
+      </div>
+      <div class="card-body">
+        <form novalidate (ngSubmit)="handle()">
+          <div class="col">
+            <label for="name">Categoria</label>
+            <select
+              name="model"
+              [(ngModel)]="sliderBegin.category"
+              id=""
+              class="form-control" 
+            >
+              <option *ngFor="let category of categories" value="{{category.name}}" >{{category.name}}</option>
+              
+            </select>
+          </div>
+          <!-- <div class="col-4">
+            <label for="name">Nombre</label>
+            <input
+              type="text"
+              [(ngModel)]="sliderBegin."
+              class="form-control"
+              placeholder="Nombre"
+            />
+          </div> -->
+
+          <div class="col">
+            <label for="name">Subir archivo </label>
+            <div>
+              <input
+                type="file"
+                (change)="changeFile($event)"
+                class="file-input"
+                placeholder="Ingrese su imagen"
+              />
+            </div>
+          </div>
+          <br />
+          <div class="col">
+            <img src="{{ sliderBegin.link }}" alt="" height="100" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            {{ buttonText }}
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
