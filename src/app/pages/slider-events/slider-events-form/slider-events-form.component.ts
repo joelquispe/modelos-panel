@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CategoryEvent } from 'app/models/category-event';
 import { SliderEvent } from 'app/models/slider-event';
 import { ApiService } from 'app/services/api.service';
 
@@ -11,6 +12,7 @@ import { ApiService } from 'app/services/api.service';
 export class SliderEventsFormComponent implements OnInit {
   sliderEvent: SliderEvent = {};
   titulo = "Crear Slider";
+  categories: CategoryEvent[];
   buttonText = "Crear";
   collection = "slidersEvent";
   file:File = null;
@@ -24,6 +26,7 @@ export class SliderEventsFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.getData();
+    this.getCategories();
   }
   async handle() {
     if(this.id != null){
@@ -39,10 +42,24 @@ export class SliderEventsFormComponent implements OnInit {
    
     const resp = await this.api.create(this.collection, this.sliderEvent);
     if (resp) {
-      this.router.navigate(["slidersEvento"]);
+      this.router.navigate(["slidersEvent"]);
     }else{
       console.log("erro naco")
     }
+  }
+
+  async getCategories() {
+    const resp = await this.api.getAll("categoryEvent");
+    if (resp) {
+      this.categories = [];
+      resp.forEach((item) => {
+        this.categories.push({
+          id: item.id,
+          name: item.data()["name"],
+        } as SliderEvent);
+      });
+    }
+    console.log(this.categories);
   }
   async update() {
     try{
@@ -82,6 +99,7 @@ export class SliderEventsFormComponent implements OnInit {
       this.sliderEvent = {
         img: resp.data()["img"],
         link: resp.data()["link"],
+        category: resp.data()["category"]
       };
     }
   }

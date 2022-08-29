@@ -26,7 +26,7 @@ export class SliderEventsComponent implements OnInit {
           id: doc.id,
           img: doc.data()['img'],
           link: doc.data()['link'],
-          
+          category: doc.data()["category"]
         }as SliderEvent)
       })
     }

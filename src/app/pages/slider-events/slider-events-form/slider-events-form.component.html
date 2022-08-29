@@ -6,7 +6,18 @@
         </div>
         <div class="card-body">
           <form novalidate (ngSubmit)="handle()">
-            
+            <div class="col">
+              <label for="name">Categoria</label>
+              <select
+                name="model"
+                [(ngModel)]="sliderEvent.category"
+                id=""
+                class="form-control" 
+              >
+                <option *ngFor="let category of categories" value="{{category.name}}" >{{category.name}}</option>
+                
+              </select>
+            </div>
             
               <div class="col">
                 <label for="name">Subir archivo </label>
